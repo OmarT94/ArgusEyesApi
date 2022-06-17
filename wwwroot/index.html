@@ -1,0 +1,312 @@
+﻿<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex">
+
+    <title>ArgusEyes QuickCheck</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">-->
+    <!--<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;400;500;600;700&display=swap">-->
+    <!--<link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.min.css">-->
+    <link rel="stylesheet" href="ArgusStyleSheet.css">
+    <!--<link rel="icon" href="favicon.png" type="image/x-icon">-->
+</head>
+
+<body class="">
+    <div class="container" id="top">
+        <div id="menu" class="row thin">
+            <svg id="menu-burger" fill="#fff" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"
+                 style="enable-background:new 0 0 100 100;" xml:space="preserve">
+            <style type="text/css">
+                .st0 {
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                }
+            </style>
+            <path class="st0"
+                  d="M85.5,55.5h-70c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5h70c2.8,0,5,2.2,5,5C90.5,53.3,88.3,55.5,85.5,55.5z   M85.5,35.5h-70c-2.8,0-5-2.2-5-5s2.2-5,5-5h70c2.8,0,5,2.2,5,5S88.3,35.5,85.5,35.5z M15.5,65.5h70c2.8,0,5,2.2,5,5s-2.2,5-5,5h-70  c-2.8,0-5-2.2-5-5S12.7,65.5,15.5,65.5z">
+				</path>
+			</svg>
+            <div id="menu-panel">
+                <ul class="menu-list">
+                    <li class="menu-item"><a class="menu-link" href="#augenoptiker">F&uuml;r Augenoptiker</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#augenaerzte">F&uuml;r Augen&auml;rzte</a></li>
+                    <li class="menu-item"><a class="menu-link" id="kontakt-menu" href="#kontakt">Kontakt</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#impressum">Impressum</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#datenschutz">Datenschutz</a></li>
+                </ul>
+            </div>
+            <div class="menu-logo w100">
+                <a class="menu-link" href="#top"><img src="images/logo.svg"></a></li>
+            </div>
+        </div>
+
+        <!--<div id="dimmer">
+        </div>-->
+
+    </div> <!-- container -->
+
+    <div class="container-a">
+        
+            <div class="w100 text-center">
+                <div id="retina-container" >
+                    <img id="retina-img" src="https://localhost:7133/api/Argus" />
+                    <script>
+                        document.getElementById('retina-img').height = window.innerHeight;
+                    </script>
+                </div>
+            </div>
+        
+        <div class="box " id="box1">
+            <div class="row w500">
+                <div class="col-mds">
+                    <div class="text-info">
+                        Patient <br /> ID 5132-2492<br>geb. 1961(60 jahre)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="notfall">Notfalkontakt</button>
+                        <br><br>Optiker &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Optiker Kontakt
+                        <br><br>
+                        Glasklar GmbH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marie Berger<br>
+                        Jungfernstieg 49 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0175/4462322<br>
+                        20354 Hamburg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; marie@glsklar_optiker.de
+                    </div>
+                    <button class="butM">Mitteilungstext</button>
+                    <br /><br>
+                    <button class="butB">Befundung erneuert senden</button>
+                    <br>
+                    <p class="senden">
+                        Befundung gesendet am 11.07.21 um 11:13 Uhr<br>
+                        gelesen am 12.7.21 um 09:03 Uhr
+                    </p>
+                    <!--<div id="status-text">Scale:</div>-->
+                </div>
+
+            </div>
+
+        </div>
+        <div class="box2">
+            <div class="slidecontainer">
+                <div class="slider1">
+                    <div class="demo1">
+                        <div class="label1">Helligkeit</div>
+                        <div id="value1">Value: </div>
+                        &nbsp;
+                    </div>
+                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange1">
+
+                </div>
+                &nbsp;
+
+                <div class="slider2">
+                    <div class="demo2">
+                        <div class="label2">Konstrat</div>
+                        <div id="value2">Value: </div>
+                        &nbsp;
+                    </div>
+                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange2">
+                </div>
+                &nbsp;
+                <div class="slider3">
+                    <div class="demo3">
+                        <div class="label3">Sättigung</div>
+                        <div id="value3">Value: </div>
+                        &nbsp;
+                    </div>
+                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange3">
+
+                </div>
+                &nbsp;
+                <div class="slider4">
+                    <div class="demo4">
+                        <div class="label4">Zoom</div>
+                        <div id="value4">Value: </div>
+                        &nbsp;
+                    </div>
+                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange4">
+
+                </div>
+                &nbsp;
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="container" id="status">
+        <div class="row w100">
+            <div class="col-md">
+                <div id="status-text">Scale:</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        for (var myRange = 1; myRange < 5; myRange++) {
+            for (var wert = 1; wert < 5; wert++) {
+
+
+                var slider = document.getElementById("myRange" + myRange)
+                var output = document.getElementById("value" + wert);
+                
+
+
+                output.innerHTML = slider.value;
+
+                slider.oninput = function () {
+                    output.innerHTML = this.value;
+                    }
+                
+            } 
+        } 
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <!--<script src="assets/parallax.min.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            var imgLoaded = new Image();
+            var imgRetina = document.getElementById('retina-img'); // our HTML img element
+            var zoomScale = 1.0, xPos = 0, yPos = 0; // zoomScale = 1.0 means the retina vertically covers the viewport, regardless of VP size
+            var bImageLoaded = false, bKeyStrg = false;
+
+            // write status line:
+            function displayStatus() {
+                var st = "";
+                st += "Zoom: " + Math.round(imgRetina.height / imgRetina.naturalHeight * 100) + "%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                st += "Maus-rechts:bewegen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                st += "Strg+Maus-rechts: zoomen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                $('#status-text').html(st);
+            }
+
+            function setUpRetinaImg() {
+                imgLoaded.onload = function () {
+                    imgRetina.src = this.src;
+                    imgRetina.height = window.innerHeight; // scales the reting img to the vertical VP size
+                    document.getElementById("retina-container").style.height = window.innerHeight; // make sure parent div always hat full VP height
+
+                    // Register the img element for zoom/move:
+                    zoomElement(document.getElementById("retina-img"));
+
+                    displayStatus();
+
+                    bImageLoaded = true;
+                };
+                imgLoaded.src = 'https://localhost:7133/api/Argus';
+
+            }
+            setUpRetinaImg();
+
+            // Adapt img to changing window height, keeping the current view, if possible:
+            function resizeWindow() {
+                if (bImageLoaded) {
+                    imgRetina.height = window.innerHeight * zoomScale;
+                    document.getElementById("retina-container").style.height = window.innerHeight;
+                    if (zoomScale > imgRetina.naturalHeight / window.innerHeight) {
+                        zoomScale = imgRetina.naturalHeight / window.innerHeight;
+                        imgRetina.height = window.innerHeight * zoomScale;
+                    }
+                    displayStatus();
+                }
+            }
+            window.onresize = resizeWindow;
+
+            // Zoom Retina mit Maustaste:
+            //
+            function zoomElement(elmnt) {
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+                elmnt.parentElement.onmousedown = zoomMouseDown;
+
+                function zoomMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    pos3 = e.clientX
+                    pos4 = e.clientY;
+                    document.onmouseup = closeZoomElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementZoom;
+                }
+
+                // Hier findet das eigentlich Gezoome statt:
+                function elementZoom(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new zoom:
+                    if (bKeyStrg) {
+                        var zoomSpeed = 200;
+                        zoomScale = zoomScale + pos2 / zoomSpeed;
+                        // Limit zoom to 0.5 minimum:
+                        if (zoomScale < 0.5)
+                            zoomScale = 0.5;
+                        if (zoomScale > imgRetina.naturalHeight / window.innerHeight)
+                            zoomScale = imgRetina.naturalHeight / window.innerHeight;
+                        imgRetina.height = window.innerHeight * zoomScale;
+                        imgRetina.parentElement.height = window.innerHeight;
+                    }
+                    else // move:
+                    {
+                        xPos -= pos1;
+                        yPos -= pos2;
+                        imgRetina.style.left = xPos;
+                        imgRetina.style.top = yPos;
+                    }
+                    displayStatus();
+                }
+
+                function closeZoomElement() {
+                    // stop moving when mouse button is released:
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            }
+
+            // Strg gedrückt?
+            $(window).keydown(function (e) {
+                if (e.ctrlKey) {
+                    bKeyStrg = true;
+                }
+            });
+            $(window).keyup(function (e) {
+                if (e.keyCode == "17") {
+                    bKeyStrg = false;
+                }
+            });
+
+            // Menü:
+            $("#menu").mouseover(function () {
+                $("#menu-panel").css("visibility", "visible");
+            });
+            $("#menu-burger").click(function () {
+                $("#menu-panel").css("visibility", "visible");
+            });
+            $("#menu").mouseleave(function () {
+                $("#menu-panel").css("visibility", "hidden");
+            });
+            $(".menu-item").click(function () {
+                $("#menu-panel").css("visibility", "hidden");
+            });
+        });
+    </script>
+</body>
+
+</html>
