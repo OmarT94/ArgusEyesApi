@@ -29,7 +29,7 @@
                     fill-rule: evenodd;
                     clip-rule: evenodd;
                 }
-            </style>
+</style>
             <path class="st0"
                   d="M85.5,55.5h-70c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5h70c2.8,0,5,2.2,5,5C90.5,53.3,88.3,55.5,85.5,55.5z   M85.5,35.5h-70c-2.8,0-5-2.2-5-5s2.2-5,5-5h70c2.8,0,5,2.2,5,5S88.3,35.5,85.5,35.5z M15.5,65.5h70c2.8,0,5,2.2,5,5s-2.2,5-5,5h-70  c-2.8,0-5-2.2-5-5S12.7,65.5,15.5,65.5z">
 				</path>
@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <div class="menu-logo w100">
-                <a class="menu-link" href="#top"><img src="images/logo.svg"></a></li>
+                <a class="menu-link" href="#top"><img src="images/logo.svg"></a>
             </div>
         </div>
 
@@ -54,87 +54,269 @@
     </div> <!-- container -->
 
     <div class="container-a">
-        
-            <div class="w100 text-center">
-                <div id="retina-container" >
+
+        <div class="w100 text-center">
+            
+            <div id="retina-container">
+                <div class="slidersEffekt">
                     <img id="retina-img" src="https://localhost:7133/api/Argus" />
-                    <script>
-                        document.getElementById('retina-img').height = window.innerHeight;
-                    </script>
                 </div>
+                <script>
+                    document.getElementById('retina-img').height = window.innerHeight;
+                </script>
             </div>
-        
+        </div>
+
         <div class="box " id="box1">
             <div class="row w500">
                 <div class="col-mds">
                     <div class="text-info">
-                        Patient <br /> ID 5132-2492<br>geb. 1961(60 jahre)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="notfall">Notfalkontakt</button>
-                        <br><br>Optiker &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Optiker Kontakt
-                        <br><br>
-                        Glasklar GmbH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marie Berger<br>
-                        Jungfernstieg 49 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0175/4462322<br>
-                        20354 Hamburg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; marie@glsklar_optiker.de
+                        <table>
+                            <tr>
+                                <th>
+                                    Patient
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>ID 5132-2492</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    geb. 1961(60 jahre)
+                                </td>
+                                <td>
+                                    <button class="notfall">Notfallkontakt</button>
+                                </td>
+                            </tr>
+                        </table>
+                        &nbsp;
+                        <table>
+                            <tr>
+                                <th>Optiker</th>
+                                <th>Optiker Kontakt</th>
+
+                            </tr>
+                            <tr>
+
+                                <td> Glasklar GmbH </td>
+                                <td>
+                                    Marie Berger
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jungfernstieg 49  &nbsp;</td>
+
+                                <td>
+                                    0175/4462322
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20354 Hamburg</td>
+                                <td>
+                                    marie@glsklar_optiker.de
+                                </td>
+                            </tr>
+
+
+
+
+
+
+                        </table>
                     </div>
                     <button class="butM">Mitteilungstext</button>
                     <br /><br>
                     <button class="butB">Befundung erneuert senden</button>
                     <br>
-                    <p class="senden">
-                        Befundung gesendet am 11.07.21 um 11:13 Uhr<br>
-                        gelesen am 12.7.21 um 09:03 Uhr
-                    </p>
+                    <div class="senden">
+                        <a>Befundung gesendet am 11.07.21 um 11:13 Uhr</a><br />
+                        <a>gelesen am 12.7.21 um 09:03 Uhr</a>
+                    </div>
                     <!--<div id="status-text">Scale:</div>-->
                 </div>
 
             </div>
 
         </div>
+
         <div class="box2">
-            <div class="slidecontainer">
-                <div class="slider1">
-                    <div class="demo1">
-                        <div class="label1">Helligkeit</div>
-                        <div id="value1">Value: </div>
-                        &nbsp;
-                    </div>
-                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange1">
+            <div class="slidecontainer ">
+                <table>
+                    <tr>
 
-                </div>
-                &nbsp;
+                        <th class="label1">Helligkeit</th>
+                        <th id="value1">Value </th>
+                    </tr>
+                    <tr>
+                        <td>
 
-                <div class="slider2">
-                    <div class="demo2">
-                        <div class="label2">Konstrat</div>
-                        <div id="value2">Value: </div>
-                        &nbsp;
-                    </div>
-                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange2">
-                </div>
-                &nbsp;
-                <div class="slider3">
-                    <div class="demo3">
-                        <div class="label3">Sättigung</div>
-                        <div id="value3">Value: </div>
-                        &nbsp;
-                    </div>
-                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange3">
+                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange1" >
 
-                </div>
-                &nbsp;
-                <div class="slider4">
-                    <div class="demo4">
-                        <div class="label4">Zoom</div>
-                        <div id="value4">Value: </div>
-                        &nbsp;
-                    </div>
-                    <input type="range" min="1" max="200" value="50" class="slider" id="myRange4">
+                        </td>
 
-                </div>
-                &nbsp;
+                    </tr>
 
+                    <tr>
+                        <th class="label2">Konstrat</th>
+                        <th id="value2">Value</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange2" onclick="contrastImage">
+                        </td>
+                    </tr>
+                    &nbsp;
+
+                    <tr>
+                        <th class="label3">Sättigung</th>
+                        <th id="value3">Value: </th>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange3">
+                        </td>
+                    </tr>
+
+                    &nbsp;
+                    <tr>
+                        <th class="label4">Zoom</th>
+                        <th id="value4"><div class="select-none">200</div> </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--<input type="range" min="1" max="200" value="50" class="slider" id="myRange4">-->
+                            <div class="range-wrapper">
+                                <!--<div class="select-none">10%</div>-->
+                                <div class="range-container">
+                                    <div class="left"></div>
+                                    <div class="knob" id="knob"></div>
+                                    <div class="right"></div>
+                                </div>
+                                <!--<div class="select-none">200%</div>-->
+                            </div>
+                        </td>
+                    </tr>
+
+                    &nbsp;
+                </table>
             </div>
+
         </div>
 
+        <div class="box3">
+            <div class="continerBox3">
+                <p>Befundung</p>
+                <div class="containerGlaukaom">
+                    <select name="Glaukom" id="Glaukom" onclick="myFunction()">
+                        
+                        <option value="Glaukom" class="btnGlaukom">Glaukom</option>
+                    </select>
+
+                    <div class="radios" id="radios">
+                        <br />
+                        <form>
+                            <label class="block"><input type="radio" id="radio1" name="radio" value="keinGlaukom">Kein Glaukom</label>
+
+                            <label class="block"><input type="radio" id="radio2" name="radio" value="Verdacht">Glaukom Verdacht</label>
+
+
+                            <label class="block"><input type="radio" id="radio3" name="radio" value="frühes">Glaukum frühes Stadium</label>
+
+                            <label class="block"><input type="radio" id="radio4" name="radio" value="mittleres">Glaukum mittleres Stadium</label>
+
+                            <label class="block"> <input type="radio" id="radio5" name="radio" value="spätes"> Glaukum spätes Stadium</label>
+                        </form>
+
+                        <div class="verticalsliderid">
+                            <input type="range" id="verticalsliderid" />
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="containerDiabetes">
+                    <select name="Diabetes" id="Diabetes" onclick="myFunction1()">
+                        <option value="Diabetes">Diabetes</option>
+                    </select>
+                    <div class="radiosDiabetes" id="radiosDiabetes">
+                        <br />
+                        <form>
+                            <label class="block"><input type="radio" id="radio1" name="radio" value="keinDiabetes">Kein Diabetes</label>
+
+                            <label class="block"><input type="radio" id="radio2" name="radio" value="Verdacht">Diabetes Verdacht</label>
+
+
+                            <label class="block"><input type="radio" id="radio3" name="radio" value="frühes">Diabetes frühes Stadium</label>
+
+                            <label class="block"><input type="radio" id="radio4" name="radio" value="mittleres">Diabetes mittleres Stadium</label>
+
+                            <label class="block"> <input type="radio" id="radio5" name="radio" value="spätes"> Diabetes spätes Stadium</label>
+                        </form>
+
+                        <div class="verticalsliderid">
+                            <input type="range" id="verticalsliderid" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <button class="vorbefundung">Vorbefundung AL</button>
+        </div>
+
+        <!--<p>Befundung</p>
+        <ul class="">
+         <content>
+             <input type="radio" id="radio1" name="radio" value="Glaukom">
+             <label for="radio1"> Kein Glaukom</label>
+             <br>
+         </content>
+
+         <content>
+             <input type="radio" id="radio2" name="radio" value="Verdacht">
+             <label for="radio2"> Glaukom Verdacht</label>
+             <br>
+         </content>
+
+         <content>
+             <input type="radio" id="radio3" name="radio" value="frühes">
+             <label for="radio3">Glaukum frühes Stadium</label>
+             <br />
+         </content>
+
+         <content>
+             <input type="radio" id="radio4" name="radio" value="mittleres">
+             <label for="radio4">Glaukum mittleres Stadium</label>
+             <br />
+         </content>
+
+         <content>
+             <input type="radio" id="radio5" name="radio" value="spätes">
+             <label for="radio5"> Glaukum spätes Stadium</label>
+         </content>
+
+
+         <content>
+             <div class="verticalsliderid">
+                 <input type="range" orient="vertical" id="verticalsliderid" />
+
+             </div>
+         </content>
+
+        </ul>-->
+
+
+
+        <div class="box4">
+            <p>tessssssssssstttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
+        </div>
+
+
+        <div class="box5">
+            <p>tessssssssssstttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
+        </div>
 
 
 
@@ -149,24 +331,49 @@
     </div>
 
     <script>
-        for (var myRange = 1; myRange < 5; myRange++) {
-            for (var wert = 1; wert < 5; wert++) {
+        var slider1 = document.getElementById("myRange1");
+        var output1 = document.getElementById("value1");
+        output1.innerHTML = slider1.value;
+        slider1.oninput = function () {
+            output1.innerHTML = this.value;
+        }
 
+        var slider2 = document.getElementById("myRange2");
+        var output2 = document.getElementById("value2");
+        output2.innerHTML = slider2.value;
+        slider2.oninput = function () {
+            output2.innerHTML = this.value;
+        }
 
-                var slider = document.getElementById("myRange" + myRange)
-                var output = document.getElementById("value" + wert);
-                
+        var slider3 = document.getElementById("myRange3");
+        var output3 = document.getElementById("value3");
+        output3.innerHTML = slider3.value;
+        slider3.oninput = function () {
+            output3.innerHTML = this.value;
+        }
 
+        var slider4 = document.getElementById("myRange4");
+        var output4 = document.getElementById("value4");
+        output4.innerHTML = slider4.value;
+        slider4.oninput = function () {
+            output4.innerHTML = this.value;
+        }
 
-                output.innerHTML = slider.value;
+        
+                //for (var myRange = 1; myRange < 5; myRange++)
+                //{
+                //    var slider = document.getElementById("myRange" + myRange);
+                //    var output = document.getElementById("value" + myRange);
 
-                slider.oninput = function () {
-                    output.innerHTML = this.value;
-                    }
-                
-            } 
-        } 
+                //    output.innerHTML = slider.value;
+
+                //        slider.oninput = function () {
+                //            output.innerHTML = this.value;
+                //            }
+                //}
+        
     </script>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
@@ -177,6 +384,7 @@
     <!--<script src="assets/parallax.min.js"></script>-->
 
     <script>
+       
         $(document).ready(function () {
             var imgLoaded = new Image();
             var imgRetina = document.getElementById('retina-img'); // our HTML img element
@@ -306,6 +514,161 @@
                 $("#menu-panel").css("visibility", "hidden");
             });
         });
+
+        //Button Hide&Show
+        function myFunction() {
+            var x = document.getElementById("radios");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function myFunction1() {
+            var x = document.getElementById("radiosDiabetes");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        //Bringtness
+        rangeInput = document.getElementById('myRange1');
+
+        container = document.getElementsByClassName('slidersEffekt')[0];
+
+        rangeInput.addEventListener("mousemove", function () {
+            container.style.filter = "brightness(" + rangeInput.value + "%)";
+        });
+
+        //Constrast
+        rangeInput2 = document.getElementById('myRange2');
+
+        container2 = document.getElementsByClassName('slidersEffekt')[0];
+
+        rangeInput2.addEventListener("mousemove", function () {
+            container2.style.filter = "contrast(" + rangeInput2.value + "%)";
+        });
+        
+        //function contrastImage() {
+        //    document.getElementById("retina-img").style.filter = "contrast("+100+"%)";
+        //}
+
+
+        //Saturation
+        rangeInput3 = document.getElementById('myRange3');
+
+        container3 = document.getElementsByClassName('slidersEffekt')[0];
+
+        rangeInput3.addEventListener("mousemove", function () {
+            container3.style.filter = "saturate(" + rangeInput3.value + "%)";
+        });
+
+        //zoom
+        //rangeInput4 = document.getElementById('myRange4');
+
+        //container4 = document.getElementsByClassName('slidersEffekt')[0];
+
+        //rangeInput4.addEventListener("mousemove", function () {
+        //    container4.style.filter = "zoom(" + rangeInput4.value + "%)";
+        //});
+
+
+        //<div id="retina-container">
+        //    <div class="slidersEffekt">
+        //        <img id="retina-img
+
+          document.addEventListener('DOMContentLoaded', function () {
+            // Query the elements
+            const image = document.getElementById("retina-img");
+            const knob = document.getElementById('knob');
+            const leftSide = knob.previousElementSibling;
+            const rightSide = knob.nextElementSibling;
+
+            // The current position of mouse
+            let x = 0;
+            let y = 0;
+            let leftWidth = 0;
+
+            const minScale = 0.1;
+            const maxScale = 2;
+            const step = (maxScale - minScale) / 100;
+
+            // Create new image element
+            const cloneImage = new Image();
+            cloneImage.addEventListener('load', function (e) {
+                // Get the natural size
+                const width = e.target.naturalWidth;
+                const height = e.target.naturalHeight;
+
+                // Set the size for image
+                image.style.width = `${width}px`;
+                image.style.height = `${height}px`;
+
+                const scale = image.parentNode.getBoundingClientRect().width / width;
+                image.style.transform = `scale(${scale}, ${scale})`;
+
+                leftSide.style.width = `${(scale - minScale) / step}%`;
+            });
+            // Clone it
+            /*cloneImage.src = image.src;*/
+
+            // Handle the mousedown event
+            // that's triggered when user drags the knob
+            const mouseDownHandler = function (e) {
+                // Get the current mouse position
+                x = e.clientX;
+                y = e.clientY;
+                leftWidth = leftSide.getBoundingClientRect().width;
+
+                // Attach the listeners to `document`
+                document.addEventListener('mousemove', mouseMoveHandler);
+                document.addEventListener('mouseup', mouseUpHandler);
+            };
+
+            const mouseMoveHandler = function (e) {
+                // How far the mouse has been moved
+                const dx = e.clientX - x;
+                const dy = e.clientY - y;
+
+                const containerWidth = knob.parentNode.getBoundingClientRect().width;
+                let newLeftWidth = ((leftWidth + dx) * 100) / containerWidth;
+                newLeftWidth = Math.max(newLeftWidth, 0);
+                newLeftWidth = Math.min(newLeftWidth, 100);
+
+                leftSide.style.width = `${newLeftWidth}%`;
+
+                leftSide.style.userSelect = 'none';
+                leftSide.style.pointerEvents = 'none';
+
+                rightSide.style.userSelect = 'none';
+                rightSide.style.pointerEvents = 'none';
+
+                const scale = minScale + newLeftWidth * step;
+                image.style.transform = `scale(${scale}, ${scale})`;
+            };
+
+            // Triggered when user drops the knob
+            const mouseUpHandler = function () {
+                leftSide.style.removeProperty('user-select');
+                leftSide.style.removeProperty('pointer-events');
+
+                rightSide.style.removeProperty('user-select');
+                rightSide.style.removeProperty('pointer-events');
+
+                // Remove the handlers of `mousemove` and `mouseup`
+                document.removeEventListener('mousemove', mouseMoveHandler);
+                document.removeEventListener('mouseup', mouseUpHandler);
+            };
+
+            // Attach the handler
+            knob.addEventListener('mousedown', mouseDownHandler);
+        });
+       
+
+        
     </script>
 </body>
 
