@@ -1,3 +1,8 @@
+using ArgusEyesApi.Data;
+using ArgusEyesApi.Repositories;
+using ArgusEyesApi.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<KundenDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ArgusKundenDaten")));
+builder.Services.AddScoped<IkundenDatenRepository, KundenDatenRepository>();
 
 var app = builder.Build();
 app.UseDefaultFiles();
