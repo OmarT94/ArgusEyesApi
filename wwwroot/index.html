@@ -6,7 +6,10 @@
     <meta name="robots" content="noindex">
 
     <title>ArgusEyes QuickCheck</title>
-
+    <script src="seite.js" asp-append-version="true"></script>
+    <!--<script type="text/javascript">
+        addMetaData
+    </script>-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--<link rel="stylesheet"
@@ -16,10 +19,13 @@
     <!--<link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.min.css">-->
     <link rel="stylesheet" href="ArgusStyleSheet.css">
     <!--<link rel="icon" href="favicon.png" type="image/x-icon">-->
-   
+
 </head>
 
 <body class="">
+
+
+
     <div class="container" id="top">
         <div id="menu" class="row thin">
             <svg id="menu-burger" fill="#fff" xmlns="http://www.w3.org/2000/svg"
@@ -53,15 +59,17 @@
         </div>-->
 
     </div> <!-- container -->
-
+   
     <div class="container-a">
-
+        
         <div class="w100 text-center">
 
             <div id="retina-container">
                 <div class="slidersEffekt">
+                    <img id="image" />
                     <!--<img id="retina-img" src="https://localhost:7133/api/Argus" onclick="mark(this)"/>-->
                     <img id="retina-img" onclick="mark(this)" />
+
                 </div>
                 <script>
                     document.getElementById('retina-img').height = window.innerHeight;
@@ -151,18 +159,20 @@
         <div class="box2">
             &nbsp;
             <div class="slidecontainer ">
-
+                <!--<form action="javascript:void(0);" method="post" onsubmit="addMetaData()"></form>-->
                 <table>
-                    <tr>
 
+                    <tr>
+                        
                         <th class="label1">Helligkeit</th>
+
                         <th id="value1">Value </th>
                     </tr>
                     <tr>
                         <td>
-
-                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange1">
-
+                           
+                          <input type="range" min="1" max="200" value="100" class="slider" id="myRange1" onclick="addMetaHelligkeit()">
+                           
                         </td>
 
                     </tr>
@@ -174,7 +184,7 @@
 
                     <tr>
                         <td>
-                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange2" onclick="contrastImage">
+                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange2" onclick="addMetaKontrast()">
                         </td>
                     </tr>
                     &nbsp;
@@ -220,7 +230,7 @@
 
             <option class="b"></option>
         </select>
-      
+
         <div class="box3">
             &nbsp;
             <p>Befundung</p>
@@ -285,45 +295,45 @@
         </div>
 
         <!--<p>Befundung</p>
-    <ul class="">
-     <content>
-         <input type="radio" id="radio1" name="radio" value="Glaukom">
-         <label for="radio1"> Kein Glaukom</label>
-         <br>
-     </content>
+        <ul class="">
+         <content>
+             <input type="radio" id="radio1" name="radio" value="Glaukom">
+             <label for="radio1"> Kein Glaukom</label>
+             <br>
+         </content>
 
-     <content>
-         <input type="radio" id="radio2" name="radio" value="Verdacht">
-         <label for="radio2"> Glaukom Verdacht</label>
-         <br>
-     </content>
+         <content>
+             <input type="radio" id="radio2" name="radio" value="Verdacht">
+             <label for="radio2"> Glaukom Verdacht</label>
+             <br>
+         </content>
 
-     <content>
-         <input type="radio" id="radio3" name="radio" value="frühes">
-         <label for="radio3">Glaukum frühes Stadium</label>
-         <br />
-     </content>
+         <content>
+             <input type="radio" id="radio3" name="radio" value="frühes">
+             <label for="radio3">Glaukum frühes Stadium</label>
+             <br />
+         </content>
 
-     <content>
-         <input type="radio" id="radio4" name="radio" value="mittleres">
-         <label for="radio4">Glaukum mittleres Stadium</label>
-         <br />
-     </content>
+         <content>
+             <input type="radio" id="radio4" name="radio" value="mittleres">
+             <label for="radio4">Glaukum mittleres Stadium</label>
+             <br />
+         </content>
 
-     <content>
-         <input type="radio" id="radio5" name="radio" value="spätes">
-         <label for="radio5"> Glaukum spätes Stadium</label>
-     </content>
+         <content>
+             <input type="radio" id="radio5" name="radio" value="spätes">
+             <label for="radio5"> Glaukum spätes Stadium</label>
+         </content>
 
 
-     <content>
-         <div class="verticalsliderid">
-             <input type="range" orient="vertical" id="verticalsliderid" />
+         <content>
+             <div class="verticalsliderid">
+                 <input type="range" orient="vertical" id="verticalsliderid" />
 
-         </div>
-     </content>
+             </div>
+         </content>
 
-    </ul>-->
+        </ul>-->
 
 
         <select id="fenster4">
@@ -342,9 +352,10 @@
         <div class="box5">
             &nbsp;
             <p>tessssssssssstttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
+            <canvas id="canvas" width="690" height="651" style="cursor:crosshair;background:url(http://www.mundoanimalia.com/images/articles/66/58/06/7f6ffaa6bb0b408017b62254211691b5/gallina.jpg)"></canvas>
         </div>
 
-
+        
 
     </div>
 
@@ -355,14 +366,22 @@
             </div>
         </div>
     </div>
-
+    <!--<script src="js/seite.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>-->
     <script>
         var slider1 = document.getElementById("myRange1");
         var output1 = document.getElementById("value1");
         output1.innerHTML = slider1.value;
         slider1.oninput = function () {
             output1.innerHTML = this.value;
+            console.log(slider1.value);
+           
+
+
         }
+
 
         var slider2 = document.getElementById("myRange2");
         var output2 = document.getElementById("value2");
@@ -376,7 +395,11 @@
         output3.innerHTML = slider3.value;
         slider3.oninput = function () {
             output3.innerHTML = this.value;
+
+
         }
+        //helligkeitDto
+        //kontrastDto
 
         //var slider4 = document.getElementById("myRange4");
         //var output4 = document.getElementById("value4");
@@ -385,21 +408,21 @@
         //    output4.innerHTML = this.value;
         //}
 
-        
-                //for (var myRange = 1; myRange < 5; myRange++)
-                //{
-                //    var slider = document.getElementById("myRange" + myRange);
-                //    var output = document.getElementById("value" + myRange);
 
-                //    output.innerHTML = slider.value;
+        //for (var myRange = 1; myRange < 5; myRange++)
+        //{
+        //    var slider = document.getElementById("myRange" + myRange);
+        //    var output = document.getElementById("value" + myRange);
 
-                //        slider.oninput = function () {
-                //            output.innerHTML = this.value;
-                //            }
-                //}
-        
+        //    output.innerHTML = slider.value;
+
+        //        slider.oninput = function () {
+        //            output.innerHTML = this.value;
+        //            }
+        //}
+
     </script>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
@@ -417,12 +440,12 @@
         //    }
         //});
 
-        
+
         //$(document).ready(function (e) {
         //    var targetbox = $('.box');
         //    if (!targetbox.is(e.target) && targetbox.has(e.target).length === 0) {
         //        $('.box').show('fast');
-            
+
         //    }
         //});
 
@@ -486,7 +509,7 @@
         //        $('.box5').fadeOut('fast');
         //    }
         //});
-        
+
 
         $(document).ready(function () {
             var imgLoaded = new Image();
@@ -504,9 +527,9 @@
             }
             // Fetch Image from Api //nebenbei habe ich das f12-drücken von Rudi gelernt :):):):):)
 
-            //const myImage = document.getElementById('img');
+            //const myImage = document.getElementById('retina-img');
 
-            //const myRequest = new Request('https://localhost:7283/api/Augen');
+            //const myRequest = new Request('https://localhost:7133/api/KundenImages/GetKundenImageById/5');
 
             //fetch(myRequest)
             //    .then((response) => {
@@ -520,6 +543,25 @@
             //        myImage.src = URL.createObjectURL(response);
             //    });
 
+            //function setUpRetinaImg() {
+            //    imgLoaded.onload = function () {
+            //        imgRetina.src = this.src;
+            //        imgRetina.height = window.innerHeight; // scales the reting img to the vertical VP size
+            //        document.getElementById("retina-container").style.height = window.innerHeight; // make sure parent div always hat full VP height
+
+            //        // Register the img element for zoom/move:
+            //        zoomElement(document.getElementById("retina-img"));
+
+            //        displayStatus();
+
+            //        bImageLoaded = true;
+            //    };
+            //    imgLoaded.src = 'https://localhost:7133/api/Argus/Get'; //My Webservice url
+
+            //}
+            //setUpRetinaImg();
+
+
             function setUpRetinaImg() {
                 imgLoaded.onload = function () {
                     imgRetina.src = this.src;
@@ -532,12 +574,44 @@
                     displayStatus();
 
                     bImageLoaded = true;
-                };
-                imgLoaded.src = 'https://localhost:7133/api/Argus/Get'; //My Webservice url
 
+                };
+                var myRequest = new Request('https://localhost:7133/api/KundenImages/GetKundenImageById/5');
+
+                //var myImage = document.getElementById("retina-img");
+
+                fetch(myRequest)
+                    .then(function (response) {
+                        console.log(response.json)
+                        return response.json();
+                    }).then((data) => {
+                        imgLoaded.src = "data:image/png; base64, " + data.contentFile;
+                        console.log(data.contentFile)
+                    });
             }
             setUpRetinaImg();
 
+
+            /* const myImage = document.getElementById('#retina-img');*/
+
+            //const myRequest = new Request('https://localhost:7133/api/KundenImages/GetKundenImageById/5');
+
+            //var myImage = document.getElementById("retina-img");
+
+            //fetch(myRequest)
+            //    .then(function (response) {
+            //        console.log(response.json)
+            //        return response.json();
+            //    }).then((data) => {
+            //        myImage.src = "data:image/png; base64, " + data.contentFile;
+
+            //        console.log(data.contentFile)
+
+            //    });
+
+
+
+            //https://localhost:7133/api/KundenImages/GetKundenImageById/1
             // Adapt img to changing window height, keeping the current view, if possible:
             function resizeWindow() {
                 if (bImageLoaded) {
@@ -639,7 +713,7 @@
 
 
 
-            
+
             $("#fenster1").mouseenter(function () {
                 $(".box").css("visibility", "visible");
             });
@@ -692,21 +766,21 @@
             });
 
 
-            $("#fenster5").mouseenter(function () {
-                $(".box5").css("visibility", "visible");
-            });
+            //$("#fenster5").mouseenter(function () {
+            //    $(".box5").css("visibility", "visible");
+            //});
 
-            $(".box5").click(function () {
-                $(".box5").css("visibility", "hidden");
-            });
+            //$(".box5").click(function () {
+            //    $(".box5").css("visibility", "hidden");
+            //});
 
-            $("#fenster5").click(function () {
-                $(".box5").css("visibility", "visible");
-            });
-            
-            
+            //$("#fenster5").click(function () {
+            //    $(".box5").css("visibility", "visible");
+            //});
 
-           
+
+
+
         });
 
         //Button Hide&Show
@@ -745,7 +819,7 @@
         rangeInput2.addEventListener("mousemove", function () {
             container2.style.filter = "contrast(" + rangeInput2.value + "%)";
         });
-        
+
         //function contrastImage() {
         //    document.getElementById("retina-img").style.filter = "contrast("+100+"%)";
         //}
@@ -774,7 +848,7 @@
         //    <div class="slidersEffekt">
         //        <img id="retina-img
 
-          document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
             // Query the elements
             const image = document.getElementById("retina-img");
             const knob = document.getElementById('knob');
@@ -859,24 +933,48 @@
 
             // Attach the handler
             knob.addEventListener('mousedown', mouseDownHandler);
-          });
+        });
 
         //Keyboard 6 Rahmen um das Bild
 
         function mark(frame) {
-        document.addEventListener('keydown', (event) => {
-            const keyName = event.key;
+            document.addEventListener('keydown', (event) => {
+                const keyName = event.key;
 
-            if (keyName === '6') {
-                frame= document.getElementById("retina-img");
+                if (keyName === '6') {
+                    frame = document.getElementById("retina-img");
                     frame.style.border = "4px solid orange";
-             }             
-        }, false);
-           
-        }
-       
+                }
+            }, false);
 
+        }
+        $("#canvas").click(function (e) {
+            getPosition(e);
+        });
+
+        var pointSize = 5;
+
+        function getPosition(event) {
+            var rect = canvas.getBoundingClientRect();
+            var x = event.clientX - rect.left;
+            var y = event.clientY - rect.top;
+
+            drawCoordinates(x, y);
+        }
+
+        function drawCoordinates(x, y) {
+            var ctx = document.getElementById("canvas").getContext("2d");
+
+
+            ctx.fillStyle = "#ff2626"; // Red color
+
+            ctx.beginPath();
+            ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
+            ctx.fill();
+        }
         
+
+
     </script>
 </body>
 

@@ -13,6 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<KundenDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ArgusKundenDaten")));
 builder.Services.AddScoped<IkundenDatenRepository, KundenDatenRepository>();
+builder.Services.AddScoped<IImageFileRepository, ImageFileRepository>();
+builder.Services.AddScoped<IMetadatenRepository, MetadatenRepository>();
+builder.Services.AddScoped<IPunktKoordinatenRepository, PunktKoordinatenRepository>();
+builder.Services.AddDbContext<KundenDBContext>(opt =>
+    opt.UseInMemoryDatabase("Metadaten"));
 
 var app = builder.Build();
 app.UseDefaultFiles();
@@ -21,6 +26,7 @@ app.UseStaticFiles();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

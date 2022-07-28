@@ -403,7 +403,8 @@ h3 {
 */
 #retina-img {
     position: relative;
-    
+    cursor:crosshair;
+   
 }
 
 /*#retina-container {
@@ -632,7 +633,6 @@ th, td {
     color: white;
     position: absolute;
     top: 25vw;
-    height: 23vw;
     left: 1vw;
     border-bottom-left-radius: 2vw;
     border-bottom-right-radius: 2vw;

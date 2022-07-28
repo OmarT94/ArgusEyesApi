@@ -64,6 +64,23 @@ namespace ArgusEyesApi.Controllers
             }
         }
 
+        //[HttpGet]
+        //public IActionResult watchPost(int IdPost)
+        //{
+        //    ContentForoModel forum = new ContentForoModel();//this model is used to "join" various
+        //                                                    //models
+
+        //    //get the data from the different tables with the id sending from the MVC controller
+        //    var appfile = _imageDBContext.AppFiles.Where(x => x.Id == IdPost).FirstOrDefault();
+
+        //    //Content data from the post
+
+        //    forum.Content = appfile.Name;//the text part
+        //    forum.ContentFile = appfile.Content;//the image
+
+        //    return Ok(forum);
+        //}
+
     }
 }
 //https://localhost:7133/api/Argus

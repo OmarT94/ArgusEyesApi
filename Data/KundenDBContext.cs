@@ -9,7 +9,7 @@ namespace ArgusEyesApi.Data
         {
 
         }
-        public DbSet<KundenDaten> KundenDaten { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<KundenDaten>().HasData(
@@ -42,6 +42,13 @@ namespace ArgusEyesApi.Data
 
                );
         }
-        
+
+        public DbSet<KundenDaten> KundenDaten { get; set; }
+        public DbSet<KundenImagesDaten> KundenImagesDaten { get; set; }
+        public DbSet<Metadaten> Metadaten { get; set; }
+        public DbSet<PunktKoordinaten> PunktKoordinaten { get; set; }
+
+
     }
+    
 }
