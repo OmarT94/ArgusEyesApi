@@ -42,10 +42,12 @@ namespace ArgusEyesApi.Controllers
         {
             //var kdDaten = this._metadatenRepository.GetImageMetaDatenById 
             //Metadaten metadaten = new();
-            //metadaten.Id = kundenImagesMetaDatenDto.Id;
+            //metadaten.Kontrast = dto.KontrastDto;
+            //metadaten.Helligkeit = dto.HelligkeitDto;
             //KundenImagesDaten dtoo = new();
-           
+
             return Ok(await _metadatenRepository.AddImageMetaDaten( dto));
+            
         }
 
 

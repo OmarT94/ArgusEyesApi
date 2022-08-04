@@ -56,13 +56,19 @@ namespace ArgusEyesApi.Repositories
                 var kd = await _kundenDBContext.KundenImagesDaten.Include(x => x.Metadaten).Where(x => x.Id == dto.Id).FirstOrDefaultAsync();
                 if (kd != null)
                 {
-                   
+                    //if (kd.Metadaten.Kontrast != null)
+                    //{
+                    //    kd.Metadaten.Kontrast = dto.KontrastDto;
+                    //    _kundenDBContext.Metadaten.Update(kd.Metadaten);
+                    //}
+                     
                     if (kd.Metadaten != null)
                     {
                         kd.Metadaten.Helligkeit = dto.HelligkeitDto;
                         kd.Metadaten.Kontrast = dto.KontrastDto;
                         _kundenDBContext.Metadaten.Update(kd.Metadaten);
                     }
+                   
                     else
                     {
                         Metadaten metaDatenRecord = new();

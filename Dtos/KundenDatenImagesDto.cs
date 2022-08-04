@@ -11,5 +11,7 @@
         //public int XDto { get; set; }
         //public int YDto { get; set; }
         //public string? TextDto { get; set; }
-    }
+        public string NameDto { get; set; }
+        public string ImagePathDto { get; set; }
+    } 
 }

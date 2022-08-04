@@ -23,13 +23,13 @@ namespace ArgusEyesApi.Controllers
         //    this._kundenDBContext = dBContext;
         //}
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var image = System.IO.File.OpenRead(@"C:\\Users\Omar\source\repos\ArgusEyesApi\wwwroot\Arguseyes\retina.jpg");
-            var result = File(image, "image/jpeg");
-            return result;
-        }
+        //[HttpGet]
+        //public ActionResult Get()
+        //{
+        //    FileStream image = System.IO.File.OpenRead(@"C:\\Users\Omar\source\repos\ArgusEyesApi\wwwroot\Arguseyes\retina.jpg");
+        //    var result = File(image, "image/jpeg");
+        //    return result;
+        //}
 
         [HttpGet()]
         public async Task<ActionResult<IEnumerable<KundenDatenDto>>> GetAllKdDaten()

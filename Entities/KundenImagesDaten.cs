@@ -11,5 +11,6 @@
 
         public PunktKoordinaten PunktKoordinaten { get; set; }
         public int? PunktKoordinatenId { get; set; }
+
     }
 }

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="seite.js"></script>
+    
+    
+    <title></title>
+</head>
+<body>
+
+    <!--<form action="">
+        <div class="MyInterface">
+            <div id="firstblock">
+                <label id="name">Name:</label>
+                <input type="text" class="myName" />
+            </div>
+            <br /><br />
+            <div id="secondblock">
+                <label id="path">Path:</label>
+                <input type="text" class="myImagePath" />
+            </div>
+            <br />
+            <input type="submit" value="Save" />
+        </div>
+    </form>-->
+
+    <form onsubmit="addImage()">
+        <label for="fname">Name:</label><br>
+        <input type="text" id="name"><br>
+        <label for="image">Image Path:</label><br>
+        <input type="text" id="image"><br><br>
+        <input type="submit" value="Save">
+    </form>
+    <br />
+    <!--<form onsubmit="SucheImage()">-->
+    <label for="imageId">Image per Id aufrufen</label><br />
+    <input type="number" id="imageId" />
+    <br /><br />
+    <!--<input type="submit" value="Suche Image" />-->
+    <button type="button" value="Suche Image" onclick="SucheImage()">Suche</button>
+    <br /><br />
+    <!--</form>-->
+    <img id="resultImage" />
+
+</body>
+</html>

@@ -1,4 +1,6 @@
-﻿using ArgusEyesApi.Entities;
+﻿using ArgusEyesApi.Dtos;
+using ArgusEyesApi.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ArgusEyesApi.Repositories.Contracts
 {
@@ -6,5 +8,6 @@ namespace ArgusEyesApi.Repositories.Contracts
     {
         Task<IEnumerable<KundenImagesDaten>> GetAllKundenImages();
         Task<KundenImagesDaten> GetKundenImageById(int id);
+        Task<FileContentResult> PostKundenImage(string path , string name);
     }
 }

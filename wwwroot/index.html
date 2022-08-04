@@ -68,7 +68,8 @@
                 <div class="slidersEffekt">
                     <img id="image" />
                     <!--<img id="retina-img" src="https://localhost:7133/api/Argus" onclick="mark(this)"/>-->
-                    <img id="retina-img" onclick="mark(this)" />
+                    <img id="retina-img" onclick="mark(this)"/>
+                    
 
                 </div>
                 <script>
@@ -171,7 +172,10 @@
                     <tr>
                         <td>
                            
-                          <input type="range" min="1" max="200" value="100" class="slider" id="myRange1" onclick="addMetaHelligkeit()">
+                          <input type="range" min="1" max="200" value="" class="slider" id="myRange1" onclick="addMetaHelligkeit()">
+                            <script>
+                               
+                            </script>
                            
                         </td>
 
@@ -184,7 +188,7 @@
 
                     <tr>
                         <td>
-                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange2" onclick="addMetaKontrast()">
+                            <input type="range" min="1" max="200" value="" class="slider" id="myRange2" onclick="addMetaKontrast()">
                         </td>
                     </tr>
                     &nbsp;
@@ -196,7 +200,7 @@
                     <tr>
                         <td>
 
-                            <input type="range" min="1" max="200" value="100" class="slider" id="myRange3">
+                            <input type="range" min="1" max="200" value="" class="slider" id="myRange3">
                         </td>
                     </tr>
 
@@ -352,7 +356,7 @@
         <div class="box5">
             &nbsp;
             <p>tessssssssssstttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
-            <canvas id="canvas" width="690" height="651" style="cursor:crosshair;background:url(http://www.mundoanimalia.com/images/articles/66/58/06/7f6ffaa6bb0b408017b62254211691b5/gallina.jpg)"></canvas>
+            <!--<canvas id="canvas" width="700" height="700" style="background:url(http://www.mundoanimalia.com/images/articles/66/58/06/7f6ffaa6bb0b408017b62254211691b5/gallina.jpg)"></canvas>-->
         </div>
 
         
@@ -388,6 +392,7 @@
         output2.innerHTML = slider2.value;
         slider2.oninput = function () {
             output2.innerHTML = this.value;
+            console.log(slider2.value);
         }
 
         var slider3 = document.getElementById("myRange3");
@@ -576,7 +581,7 @@
                     bImageLoaded = true;
 
                 };
-                var myRequest = new Request('https://localhost:7133/api/KundenImages/GetKundenImageById/5');
+                var myRequest = new Request('https://localhost:7133/api/KundenImages/137');
 
                 //var myImage = document.getElementById("retina-img");
 
@@ -718,7 +723,7 @@
                 $(".box").css("visibility", "visible");
             });
 
-            $(".box").click(function () {
+            $(".box").mouseleave(function () {
                 $(".box").css("visibility", "hidden");
             });
 
@@ -731,20 +736,20 @@
                 $(".box2").css("visibility", "visible");
             });
 
-            $(".box2").click(function () {
+            $(".box2").mouseleave(function () {
                 $(".box2").css("visibility", "hidden");
             });
 
-            $("#fenster2").click(function () {
-                $(".box2").css("visibility", "visible");
-            });
+            //$("#fenster2").click(function () {
+            //    $(".box2").css("visibility", "visible");
+            //});
 
 
             $("#fenster3").mouseenter(function () {
                 $(".box3").css("visibility", "visible");
             });
 
-            $(".box3").click(function () {
+            $(".box3").mouseleave(function () {
                 $(".box3").css("visibility", "hidden");
             });
 
@@ -757,7 +762,7 @@
                 $(".box4").css("visibility", "visible");
             });
 
-            $(".box4").click(function () {
+            $(".box4").mouseleave(function () {
                 $(".box4").css("visibility", "hidden");
             });
 
@@ -766,17 +771,17 @@
             });
 
 
-            //$("#fenster5").mouseenter(function () {
-            //    $(".box5").css("visibility", "visible");
-            //});
+            $("#fenster5").click(function () {
+                $(".box5").css("visibility", "visible");
+            });
 
-            //$(".box5").click(function () {
-            //    $(".box5").css("visibility", "hidden");
-            //});
+            $(".box5").mouseleave(function () {
+                $(".box5").css("visibility", "hidden");
+            });
 
-            //$("#fenster5").click(function () {
-            //    $(".box5").css("visibility", "visible");
-            //});
+            $("#fenster5").click(function () {
+                $(".box5").css("visibility", "visible");
+            });
 
 
 
@@ -948,31 +953,100 @@
             }, false);
 
         }
-        $("#canvas").click(function (e) {
-            getPosition(e);
-        });
+        //$("#canvas").click(function (e) {
+        //    getPosition(e);
+        //});
 
-        var pointSize = 5;
+        //var pointSize = 5;
 
-        function getPosition(event) {
-            var rect = canvas.getBoundingClientRect();
-            var x = event.clientX - rect.left;
-            var y = event.clientY - rect.top;
+        //function getPosition(event) {
+        //    var rect = canvas.getBoundingClientRect();
+        //    var x = event.clientX - rect.left;
+        //    var y = event.clientY - rect.top;
 
-            drawCoordinates(x, y);
-        }
+        //    drawCoordinates(x, y);
+        //}
 
-        function drawCoordinates(x, y) {
-            var ctx = document.getElementById("canvas").getContext("2d");
+        //function drawCoordinates(x, y) {
+        //    var ctx = document.getElementById("canvas").getContext("2d");
 
 
-            ctx.fillStyle = "#ff2626"; // Red color
+        //    ctx.fillStyle = "#ff2626"; // Red color
 
-            ctx.beginPath();
-            ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
-            ctx.fill();
-        }
+        //    ctx.beginPath();
+        //    ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
+        //    ctx.fill();
+        //}
         
+
+
+
+
+        //var canvas = document.getElementById('canvas'),
+        //    ctx = canvas.getContext('2d'),
+        //    circle = {},
+        //    drag = false,
+        //    circleMade = false,
+        //    mouseMoved = false;
+
+        //function draw() {
+        //    ctx.beginPath();
+        //    ctx.arc(circle.X, circle.Y, circle.radius, 0, 2 * Math.PI);
+        //    ctx.stroke();
+
+        //}
+
+        //function mouseDown(e) {
+        //    circle.startX = e.pageX - this.offsetLeft;
+        //    circle.startY = e.pageY - this.offsetTop;
+
+        //    circle.X = circle.startX;
+        //    circle.Y = circle.startY;
+
+        //    if (!circleMade) {
+        //        circle.radius = 0;
+        //    }
+
+        //    drag = true;
+        //}
+
+        //function mouseUp() {
+        //    drag = false;
+        //    circleMade = true;
+
+        //    if (!mouseMoved) {
+        //        circle = {};
+        //        circleMade = false;
+        //        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //    }
+
+        //    mouseMoved = false;
+        //}
+
+        //function mouseMove(e) {
+        //    if (drag) {
+        //        mouseMoved = true;
+        //        circle.X = e.pageX - this.offsetLeft;
+        //        circle.Y = e.pageY - this.offsetTop;
+        //        if (!circleMade) {
+        //            circle.radius = Math.sqrt(Math.pow((circle.X - circle.startX), 2) + Math.pow((circle.Y - circle.startY), 2));
+        //        }
+        //        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //        draw();
+
+
+        //    }
+        //}
+
+        //function init() {
+        //    canvas.addEventListener('mousedown', mouseDown, false);
+        //    canvas.addEventListener('mouseup', mouseUp, false);
+        //    canvas.addEventListener('mousemove', mouseMove, false);
+
+        //}
+
+        //init();
+
 
 
     </script>

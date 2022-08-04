@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArgusEyesApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class KundenImagesController : ControllerBase
     {
@@ -43,6 +43,10 @@ namespace ArgusEyesApi.Controllers
                 KundenDatenImagesDto a = new KundenDatenImagesDto();
                 a.FileName = kdDaten.Name;
                 a.ContentFile = kdDaten.Content;
+               KundenImagesMetaDatenDto dto = new KundenImagesMetaDatenDto();
+                dto.HelligkeitDto = (int)kdDaten.Metadaten.Helligkeit;
+                dto.KontrastDto = (int)kdDaten.Metadaten.Kontrast;
+                
                 return Ok(a);
 
             }
@@ -55,6 +59,23 @@ namespace ArgusEyesApi.Controllers
 
 
         //https://localhost:7133/api/KundenImages/GetKundenImageById/1
+
+
+        [HttpPost("PostKundenImageById")]
+        public async Task<ActionResult> PostKundenImageById(ImageDto dto)
+        {
+            try
+            {
+                return Ok(await _imageFileRepository.PostKundenImage(dto.ImagePath, dto.Name));
+
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
 
 
     }
